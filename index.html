@@ -14,15 +14,16 @@
     <meta name="robots" content="index, follow">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="preload" href="assets/fonts/nunito/nunito-v25-latin-ext-800.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/nunito/nunito-v25-latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/nunito/nunito-v25-latin-ext-500.woff2" as="font" type="font/woff2" crossorigin>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
 
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
-
-    <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/tiny-slider.css">
 
     <!--====== Line Icons CSS ======-->
     <link rel="stylesheet" href="assets/fonts/lineicons/font-css/LineIcons.css">
@@ -78,28 +79,6 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-
-    <!--====== PRELOADER PART START ======-->
-
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--====== PRELOADER PART ENDS ======-->
-
     <!--====== HEADER PART START ======-->
 
     <section class="header_area">
@@ -111,16 +90,13 @@
                             <a class="navbar-brand mr-5" href="index.html">
                                 <img src="assets/images/logo.svg" alt="Logo">
                             </a>
-                            <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
-                                data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
-                                aria-expanded="false" aria-label="Navigacija">
+                            <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Navigacija">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
                             </button>
 
-                            <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none"
-                                id="navbarOne">
+                            <div class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none" id="navbarOne">
                                 <ul id="nav"
                                     class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
                                     <li class="nav-item ml-5 lg:ml-11">
@@ -145,7 +121,6 @@
 
         <div id="home" class="header_hero bg-gray relative z-10 overflow-hidden lg:flex items-center">
             <div class="hero_shape shape_1">
-                <!--<img src="assets/images/shape/shape-1.svg" alt="shape">-->
                 <i class="lni lni-magnifier" style="font-size: xx-large;"></i>
             </div><!-- hero shape -->
             <div class="hero_shape shape_2">
@@ -183,13 +158,9 @@
                 <div class="row">
                     <div class="w-full lg:w-1/2">
                         <div class="header_hero_content pt-150 lg:pt-0">
-                            <h1
-                                class="hero_title text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold">
-                                <span class="text-theme-color">Statistična analiza</span> za diplome, magisterije,
-                                doktorate in druga dela</h1>
-                            <p class="mt-8 lg:mr-8">Smo ekipa statistikov, akademikov in doktorjev znanosti različnih
-                                področij, ter nudimo pomoč pri izvedbi, pisanju in interpretaciji raznovrstnih
-                                statističnih analiz na vseh nivojih težavnosti.</p>
+                            <h1 class="hero_title text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold">
+                                <span class="text-theme-color">Statistična analiza</span> za diplome, magisterije, doktorate in druga dela</h1>
+                            <p class="mt-8 lg:mr-8">Smo ekipa statistikov, akademikov in doktorjev znanosti različnih področij, ter nudimo pomoč pri izvedbi, pisanju in interpretaciji raznovrstnih statističnih analiz na vseh nivojih težavnosti.</p>
                             <div class="hero_btn mt-10">
                                 <a class="main-btn page-scroll" href="#povprasevanje">Pošlji povpraševanje</a>
                             </div>
@@ -201,7 +172,7 @@
 
             <div class="header_image flex items-center">
                 <div class="image 2xl:pl-25">
-                    <img src="assets/images/header-image.svg" alt="Header Image"> <!-- TODO slika-->
+                    <img src="assets/images/header-image.svg" alt="Header Image">
                 </div>
             </div> <!-- header image -->
         </div> <!-- header hero -->
@@ -400,13 +371,13 @@
 
     <!--====== CONTACT PART START ======-->
 
-    <section id="povprasevanje" class="contact_area relative pt-18 pb-120">
+    <section class="contact_area relative pt-18 pb-120">
         <div class="contact_image flex items-center justify-end">
             <div class="image lg:pr-13">
-                <img src="assets/images/contact.svg" alt="about">
+                <img src="assets/images/contact.svg" alt="contact">
             </div>
         </div> <!-- about image -->
-
+		<a id="povprasevanje" ></a>
         <div class="container">
             <div class="row justify-end">
                 <div class="w-full lg:w-1/2">
@@ -414,10 +385,8 @@
                         <div class="section_title pb-4">
                             <h5 class="sub_title">Preveri našo ponudbo</h5>
                             <h4 class="main_title">POVPRAŠEVANJE</h4>
-                            <p>Pošlji nam <span class="text-theme-color">neobvezujoče</span> povpraševanje na katerega
-                                ti odgovorimo, kar se da hitro, s ponudbo načrta dela in ceno naše storitve.</p>
-                            <p>Za čim hitrejšo ponudbo rabimo cilj analize (raziskovalna vprašanja ali hipoteze) ter
-                                okviren opis podatkov (vprašalnik ali kar podatke).</p>
+                            <p>Pošlji nam <span class="text-theme-color">neobvezujoče</span> povpraševanje na katerega ti odgovorimo, kar se da hitro, s ponudbo načrta dela in ceno naše storitve.</p>
+                            <p>Za čim hitrejšo ponudbo rabimo cilj analize (raziskovalna vprašanja ali hipoteze) ter okviren opis podatkov (vprašalnik ali kar podatke).</p>
                         </div> <!-- section title -->
 
                         <div class="contact_form">
@@ -477,22 +446,6 @@
                                                     class="w-full rounded-md py-0 px-0 border border-solid border-body-color"
                                                     id="multiple_files" type="file" multiple accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
                                                 <p class="block font-medium">PDF, DOCX, XLSX v največji velikosti 10MB</p>
-                                                <!--<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md"
-                                                     style="border:2px dashed rgb(209, 213, 219);">
-                                                    <div class="space-y-1 text-center">
-                                                      <svg style="height:48px; width:48px; margin-top:10px;" class="mx-auto" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                      </svg>
-                                                      <div class="flex text-gray-600">
-                                                        <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                                                          <span class="text-theme-color">Naloži datoteko</span>
-                                                          <input id="file-upload" name="file-upload" type="file" class="sr-only" multiple>
-                                                        </label>
-                                                        <p class="pl-1">&nbsp;ali pa jo povleci in spusti</p>
-                                                      </div>
-                                                      <p class="text-gray-500">PDF, DOCX, XLSX v največji velikosti 10MB</p>
-                                                    </div>
-                                                  </div>-->
                                             </div> <!-- single form -->
                                         </div>
                                     </div>
@@ -519,14 +472,9 @@
     <!--====== FOOTER PART START ======-->
 
     <footer id="footer" class="footer_area bg-black relative z-10">
-        <div class="container">
-            <div class="footer_widget">
-                <div class="row justify-center">
-                    <div class="footer_about mt-13 mb-13 mx-3"></div> <!-- footer about -->
-                </div> <!-- row -->
-            </div> <!-- footer widget -->
-
-        </div> <!-- container -->
+		<div class="row justify-center">
+			<div class="footer_about mt-13 mb-13 mx-3"></div> <!-- footer about -->
+		</div> <!-- row -->
     </footer>
 
     <!--====== FOOTER PART ENDS ======-->
@@ -536,12 +484,6 @@
     <a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
 
     <!--====== BACK TOP TOP PART ENDS ======-->
-
-    <!--====== Tiny Slider js ======-->
-    <script src="assets/js/tiny-slider.js"></script>
-
-    <!--====== Wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
